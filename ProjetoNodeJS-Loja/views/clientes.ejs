@@ -1,0 +1,42 @@
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/navbar.ejs') %>
+
+        <div class="wrapper">
+            <div class="content">
+                <div class="header">
+                    <h1>Lista de Clientes</h1>
+                </div>
+                <div class="body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nome</th>
+                                <th>CPF</th>
+                                <th>Endereço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% clientes.forEach(cliente=> { %>
+                                <tr>
+                                    <td><img src="imgs/Clientes.gif" width="30px"></td>
+                                    <td>
+                                        <%= cliente.nome %>
+                                    </td>
+                                    <td>
+                                        <%= cliente.cpf %>
+                                    </td>
+                                    <td>
+                                        <%= cliente.endereco %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                    <a href="/" class="btn-voltar">Voltar para o início</a>
+                </div>
+            </div>
+        </div>
+
+
+        <%- include ('partials/footer.ejs') %>

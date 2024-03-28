@@ -1,0 +1,40 @@
+<%- include ('partials/header.ejs') %>
+    <%- include ('partials/navbar.ejs') %>
+
+    <div class="main-panel">
+        <div class="panel-content">
+            <h1 class="panel-title"><strong>Bem-vindo à nossa página inicial da Dino Store!</strong></h1>
+            <p class="panel-text">Explore informações sobre clientes, produtos e pedidos da Dino Store.</p>
+            <hr>
+            <div class="panel-selection">
+                <h2 class="selection-title">Para qual página deseja ir?</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <a href="/" title="Clique para voltar à página inicial da Dino Store">
+                            <strong>Home</strong>
+                            <span>Visite a página inicial da Dino Store para obter uma visão geral do site.</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/produtos" title="Clique para ver os produtos disponíveis na Dino Store">
+                            <strong>Produtos</strong>
+                            <span>Explore os produtos disponíveis na Dino Store e descubra as opções de compra.</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/clientes" title="Clique para ver a lista de clientes da Dino Store">
+                            <strong>Clientes</strong>
+                            <span>Veja uma lista de clientes da Dino Store e seus detalhes.</span>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/pedidos" title="Clique para ver os pedidos feitos na Dino Store">
+                            <strong>Pedidos</strong>
+                            <span>Acesse uma lista de pedidos feitos na Dino Store e seus detalhes.</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <%- include ('partials/footer.ejs') %>
