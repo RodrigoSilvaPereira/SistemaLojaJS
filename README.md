@@ -19,7 +19,7 @@ Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/SistemaLoja.git
+   git clone https://github.com/RodrigoSilvaPereira/SistemaLojaJS.git
 
 2. Acesse o diretório do projeto:
 cd SistemaLoja
