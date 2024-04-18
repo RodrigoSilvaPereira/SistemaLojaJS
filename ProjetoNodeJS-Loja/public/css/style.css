@@ -206,3 +206,62 @@ footer h1 {
     font-size: 14px;
     color: #666;
 }
+
+/* Estilo para o formulário de cadastro */
+.C-wrapper {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.C-header h1 {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.C-body {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-size: 18px;
+    width: 100%;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    transition: border-color 0.3s ease;
+    padding: 5px;
+    padding-left: 20px;
+}
+
+.btn-cadastrar {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: auto;
+}
+
+.btn-cadastrar:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-cadastrar,
+input[type="text"] {
+    font-size: 16px;
+}

@@ -1,6 +1,29 @@
 <%- include ('partials/header.ejs') %>
     <%- include ('partials/navbar.ejs') %>
 
+        <div class="C-wrapper">
+            <div class="C-content">
+                <div class="C-header">
+                    <h1>Cadastrar Pedido</h1>
+                </div>
+                <div class="C-body">
+                    <form action="/pedidos/new" method="POST">
+                        <label>Numero do pedido:</label>
+                        <input type="number" name="numero" id="numero" placeholder="Insira o numero do pedido"
+                            class="form-control" required>
+                        <label>Valor:</label>
+                        <input type="number" name="valor" id="valor" placeholder="Insira o valor do pedido"
+                            class="form-control" required>
+                        <br>
+                        <button class="btn-cadastrar">Cadastrar</button>
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
         <div class="wrapper">
             <div class="content">
                 <div class="header">
@@ -13,6 +36,7 @@
                                 <th></th>
                                 <th>Número</th>
                                 <th>Valor</th>
+                                <th style="text-align: center;" colspan="2">Ações:</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,6 +49,11 @@
                                     <td>
                                         <%= pedido.valor.toLocaleString('pt-br', {style: 'currency' , currency: 'BRL' })
                                             %>
+                                    </td>
+                                    <td><a style="color: orange;" href="/pedidos/edit/<%= pedido._id %>">Editar</a>
+                                    </td>
+                                    <td><a style="color: red;" href="/pedidos/delete/<%= pedido._id %>"
+                                            onclick="return confirm('Confirma a exclusão do registro?')">Excluir</a>
                                     </td>
                                 </tr>
                                 <% }) %>

@@ -1,6 +1,32 @@
 <%- include ('partials/header.ejs') %>
     <%- include ('partials/navbar.ejs') %>
 
+        <div class="C-wrapper">
+            <div class="C-content">
+                <div class="C-header">
+                    <h1>Cadastrar cliente</h1>
+                </div>
+                <div class="C-body">
+                    <form action="/clientes/new" method="POST">
+                        <label>Nome do cliente:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Insira o nome do cliente"
+                            class="form-control" required>
+                        <label>CPF:</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="Insira o CPF do cliente"
+                            class="form-control" required>
+                        <label>Endereço do cliente:</label>
+                        <input type="text" name="endereco" id="endereco" placeholder="Insira o endereço do cliente"
+                            class="form-control" required>
+                        <br>
+                        <button class="btn-cadastrar">Cadastrar</button>
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
         <div class="wrapper">
             <div class="content">
                 <div class="header">
@@ -14,6 +40,7 @@
                                 <th>Nome</th>
                                 <th>CPF</th>
                                 <th>Endereço</th>
+                                <th style="text-align: center;" colspan="2">Ações:</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,6 +55,11 @@
                                     </td>
                                     <td>
                                         <%= cliente.endereco %>
+                                    </td>
+                                    <td><a style="color: orange;" href="/clientes/edit/<%= cliente._id %>">Editar</a>
+                                    </td>
+                                    <td><a style="color: red;" href="/clientes/delete/<%= cliente._id %>"
+                                            onclick="return confirm('Confirma a exclusão do registro?')">Excluir</a>
                                     </td>
                                 </tr>
                                 <% }) %>

@@ -1,6 +1,32 @@
 <%- include ('partials/header.ejs') %>
     <%- include ('partials/navbar.ejs') %>
 
+        <div class="C-wrapper">
+            <div class="C-content">
+                <div class="C-header">
+                    <h1>Cadastrar Produtos</h1>
+                </div>
+                <div class="C-body">
+                    <form action="/produtos/new" method="POST">
+                        <label>Nome do produto:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Insira o nome do produto"
+                            class="form-control" required>
+                        <label>Preço:</label>
+                        <input type="number" name="preco" id="preco" placeholder="Insira o preço do produto"
+                            class="form-control" required>
+                        <label>Categoria:</label>
+                        <input type="text" name="categoria" id="categoria" placeholder="Insira a categoria do produto"
+                            class="form-control" required>
+                        <br>
+                        <button class="btn-cadastrar">Cadastrar</button>
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
         <div class="wrapper">
             <div class="content">
                 <div class="header">
@@ -14,6 +40,7 @@
                                 <th>Nome</th>
                                 <th>Preço</th>
                                 <th>Categoria</th>
+                                <th style="text-align: center;" colspan="2">Ações:</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,6 +56,11 @@
                                     </td>
                                     <td>
                                         <%= produto.categoria %>
+                                    </td>
+                                    <td><a style="color: orange;" href="/produtos/edit/<%= produto._id %>">Editar</a>
+                                    </td>
+                                    <td><a style="color: red;" href="/produtos/delete/<%= produto._id %>"
+                                            onclick="return confirm('Confirma a exclusão do registro?')">Excluir</a>
                                     </td>
                                 </tr>
                                 <% }) %>
